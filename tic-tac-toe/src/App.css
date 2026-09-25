@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap");
+ 
+:root {
+  --bg-deep: #1b1f3b;
+  --bg-card: #252a4a;
+  --bg-square: #2f3560;
+  --bg-square-hover: #3a4177;
+  --text-light: #f4f4fb;
+  --text-muted: #9296bf;
+  --accent-x: #ff6b6b;
+  --accent-o: #4ecdc4;
+  --accent-win: #ffd166;
+  --border-soft: rgba(244, 244, 251, 0.08);
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text-light);
+}
+ 
+/* ---------- Page layout: full-screen, centered ---------- */
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at 20% 20%, #232752 0%, var(--bg-deep) 55%);
+}
+ 
+/* ---------- Game card ---------- */
+.game-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+ 
+.game-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 20px;
+  letter-spacing: 0.5px;
+}
+ 
+/* ---------- Scoreboard ---------- */
+.scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+ 
+.score-item {
+  background: var(--bg-square);
+  border-radius: 12px;
+  padding: 10px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+ 
+.score-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+ 
+.score-value {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+ 
+.score-x .score-value {
+  color: var(--accent-x);
+}
+ 
+.score-o .score-value {
+  color: var(--accent-o);
+}
+ 
+.btn-reset-score {
+  grid-column: 1 / -1;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-soft);
+  font-size: 0.78rem;
+  padding: 8px;
+}
+ 
+.btn-reset-score:hover {
+  color: var(--text-light);
+  border-color: var(--text-muted);
+}
+ 
+/* ---------- Game status ---------- */
+.game-status {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  min-height: 1.4em;
+}
+ 
+.status-win {
+  color: var(--accent-win);
+}
+ 
+.status-draw {
+  color: var(--text-muted);
+}
+ 
+/* ---------- Board ---------- */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 auto 22px;
+  max-width: 320px;
+}
+ 
+.square {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background: var(--bg-square);
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+}
+ 
+.square:hover {
+  background: var(--bg-square-hover);
+  transform: translateY(-2px);
+}
+ 
+.square:active {
+  transform: translateY(0);
+}
+ 
+.square-x {
+  color: var(--accent-x);
+}
+ 
+.square-o {
+  color: var(--accent-o);
+}
+ 
+.winning-square {
+  background: rgba(255, 209, 102, 0.18);
+  border-color: var(--accent-win);
+}
+ 
+/* ---------- Buttons ---------- */
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.15s ease;
+}
+ 
+.btn-restart {
+  width: 100%;
+  background: linear-gradient(135deg, var(--accent-x), var(--accent-o));
+  color: #14162b;
+}
+ 
+.btn-restart:hover {
+  transform: translateY(-1px);
+}
+ 
+.btn-restart:active {
+  transform: translateY(0);
+}
+ 
+/* ---------- Responsive: tablet & mobile ---------- */
+@media (max-width: 480px) {
+  .game-card {
+    padding: 24px 18px 20px;
+  }
+ 
+  .game-title {
+    font-size: 1.6rem;
+  }
+ 
+  .board {
+    max-width: 280px;
+    gap: 8px;
+  }
+ 
+  .square {
+    font-size: 2.1rem;
+    border-radius: 10px;
+  }
+ 
+  .score-value {
+    font-size: 1.1rem;
+  }
+}
