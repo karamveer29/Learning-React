@@ -1,0 +1,634 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #6c47ff;
+}
+
+.header nav {
+  display: flex;
+
+  gap: 30px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.header nav a:hover {
+  color: #6c47ff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 520px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      #e8e0ff,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      #ffe3f1,
+      transparent 35%
+    ),
+    #ffffff;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  border-radius: 50px;
+
+  background: #eee9ff;
+
+  color: #6340d9;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(
+    45px,
+    7vw,
+    80px
+  );
+
+  line-height: 0.98;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #6c47ff;
+}
+
+.hero p {
+  max-width: 600px;
+
+  margin: auto;
+
+  color: #666;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  margin-bottom: 35px;
+}
+
+.hero-btn {
+  display: inline-block;
+
+  background: #6c47ff;
+
+  color: white;
+
+  padding: 15px 30px;
+
+  border-radius: 10px;
+
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+
+  background: #5834e6;
+}
+
+
+/* =========================
+   MEME SECTION
+========================= */
+
+.meme-section {
+  padding: 80px 7%;
+}
+
+.section-heading {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #777;
+}
+
+.meme-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fill,
+      minmax(230px, 1fr)
+    );
+
+  gap: 25px;
+
+  max-width: 1400px;
+
+  margin: auto;
+}
+
+
+/* =========================
+   MEME CARD
+========================= */
+
+.meme-card {
+  background: white;
+
+  border: 1px solid #e7e7e7;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.meme-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.1);
+}
+
+.meme-card img {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: contain;
+
+  background: #eeeeee;
+
+  display: block;
+}
+
+.meme-card-content {
+  padding: 17px;
+}
+
+.meme-card h3 {
+  font-size: 17px;
+
+  margin-bottom: 12px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.meme-card button {
+  width: 100%;
+
+  border: none;
+
+  background: #6c47ff;
+
+  color: white;
+
+  padding: 10px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading {
+  padding: 100px;
+
+  text-align: center;
+
+  font-size: 20px;
+
+  color: #666;
+}
+
+.error {
+  padding: 80px;
+
+  text-align: center;
+
+  color: #e53935;
+}
+
+.error button {
+  display: block;
+
+  margin: 20px auto;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  background: #6c47ff;
+
+  color: white;
+
+  border-radius: 8px;
+}
+
+
+/* =========================
+   GENERATOR
+========================= */
+
+.generator {
+  padding: 50px 7%;
+
+  min-height: calc(
+    100vh - 72px
+  );
+}
+
+.back-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #6c47ff;
+
+  font-weight: 700;
+
+  font-size: 15px;
+
+  margin-bottom: 30px;
+}
+
+.generator-container {
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    400px 1fr;
+
+  gap: 50px;
+
+  align-items: start;
+}
+
+.editor {
+  background: white;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 18px;
+
+  padding: 28px;
+}
+
+.editor h2 {
+  font-size: 28px;
+
+  margin-bottom: 7px;
+}
+
+.selected-name {
+  color: #777;
+
+  margin-bottom: 25px;
+}
+
+.controls > label {
+  display: block;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   TEXT INPUT
+========================= */
+
+.text-input-row {
+  display: flex;
+
+  gap: 8px;
+
+  margin-bottom: 12px;
+}
+
+.text-input-row input {
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 15px;
+}
+
+.text-input-row input:focus {
+  border-color: #6c47ff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(108, 71, 255, 0.1);
+}
+
+.remove-btn {
+  width: 45px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ffe5e5;
+
+  color: #d32f2f;
+
+  font-size: 22px;
+}
+
+.add-text-btn {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 25px;
+
+  border: 1px dashed #b6a8ff;
+
+  background: #f7f5ff;
+
+  color: #6542e5;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   SETTINGS
+========================= */
+
+.setting {
+  margin-bottom: 20px;
+}
+
+.setting label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+}
+
+.setting input[type="range"] {
+  width: 100%;
+}
+
+.setting input[type="color"] {
+  width: 55px;
+
+  height: 35px;
+
+  border: none;
+
+  background: none;
+}
+
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+.generate-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #6c47ff;
+
+  color: white;
+
+  font-weight: 700;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.generate-btn:hover {
+  background: #5834e6;
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   PREVIEW
+========================= */
+
+.preview {
+  background: white;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e5e5;
+
+  padding: 25px;
+
+  min-height: 600px;
+}
+
+.preview h3 {
+  margin-bottom: 20px;
+}
+
+.canvas-container {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #eeeeee;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  min-height: 500px;
+}
+
+.canvas-container canvas {
+  max-width: 100%;
+
+  max-height: 650px;
+
+  display: block;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .generator-container {
+    grid-template-columns: 1fr;
+  }
+
+  .editor {
+    width: 100%;
+  }
+
+  .preview {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 0 20px;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: 450px;
+
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .meme-section {
+    padding: 50px 20px;
+  }
+
+  .generator {
+    padding: 30px 20px;
+  }
+
+  .meme-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  .meme-card img {
+    height: 150px;
+  }
+
+  .meme-card-content {
+    padding: 10px;
+  }
+
+  .meme-card h3 {
+    font-size: 13px;
+  }
+
+  .meme-card button {
+    font-size: 12px;
+  }
+}

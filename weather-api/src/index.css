@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  background: #f3f4ee;
+  color: #152b2a;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
